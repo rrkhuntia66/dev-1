@@ -1,0 +1,71 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: give name story 1
+  steps:
+  - intent: ask_me_anything
+  - action: utter_ask_icecream_size
+    entities:
+    - icecream_size: large
+  - slot_was_set:
+    - icecream_size: large
+    entities:
+    - icecream_size: medium
+  - slot_was_set:
+    - icecream_size: medium
+    entities:
+    -icecream_size: small
+  -slot_was_set:
+    - icecream_size: small
+  - action: utter_ask_icecream_price
+  - intent: give_icecream_price
+    entities:
+    - icecream_price: 10
+  - slot_was_set: 10
+    entities:
+    - icecream_price: 1000
+  - slot_was_set: 1000
+  - action: utter_give_icecream_flavors
+  -intent: give_icecream_flavors
+    entities:
+    - icecream_flavor: vanilla
+  - slot_was_set: vanilla
+    entities:
+    - icecream_flavor: chocolate
+  - slot_was_set: chocolate
+    entities:
+    - iceream_flavor: butterscotch
+  - slot_was_set: butterscotch
+
+
+  - action: utter_remember
+  - intent: goodbye
+  - action: utter_goodbye
