@@ -1,0 +1,130 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+
+- intent: ask_me_anything
+  examples: |
+    - ask me anything
+    - would you like to ask me something
+    - feel free to ask me about things
+    - want to ask me something?
+- intent: give_icecream_size
+  examples: |
+    - i want a [large](icecream_size) icecream
+    - [medium](icecream_size) size
+    - [large](icecream_size) size
+    - [small](icecream_size) size
+    - give me a [small](icecream_size) icecream
+    - [small](icecream_size)
+    - [medium](icecream_size)
+    - [large](icecream_size)
+    - i'd prefer [medium](icecream_size) size
+    - gimme gimme gimme [small](icecream_size) icecream
+    - give icecream_size
+    - i want a [large](icecream_size) icecream please
+    - i want to give you my icecream
+    - [large](icecream_size)
+- intent: give_icecream_price
+  examples: |
+    - [10](number)
+    - [1000](number)
+- intent: give_icecream_flavors
+  examples: |
+    - i want a [vanilla](flavor) icecream
+    - [chocolate](flavor)
+    - [butterscotch](flavor)
+    - give me a [vanilla](flavor) icecream
+    - [chocolate](flavor)
+    - [butterscotch](flavor)
+    - i'd prefer [vanilla](flavor) icecream
+    - [chocolate](flavor)
+    - [butterscotch](flavor)
